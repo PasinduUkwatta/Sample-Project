@@ -9,6 +9,7 @@ export default class Login extends Component {
         this.state ={
             email: '',
             password: ''
+            data :[]
         }
         this.changeHandler = this.changeHandler.bind(this);
         this.submitHandler = this.submitHandler.bind(this);
@@ -18,6 +19,10 @@ export default class Login extends Component {
     changeHandler = e => {
         this.setState({[e.target.name]: e.target.value})
     }
+
+
+
+
 
      submitHandler = e => {
         e.preventDefault()
@@ -37,9 +42,10 @@ export default class Login extends Component {
                                        
                 }
                 else{
-                    
+                    console.log(response.data)
                     console.log("Welcome to the site")
-                    this.props.history.push('/payment-details') 
+                    this.props.history.push('/payment-details')
+                    
 
                 }
 

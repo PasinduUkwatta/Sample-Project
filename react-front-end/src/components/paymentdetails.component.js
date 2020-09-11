@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios"
-import CustomizedTables from "./table.component"
-import Table from "./table.component.test"
+
 class PaymentDetails extends Component {
 
 
@@ -56,18 +55,22 @@ class PaymentDetails extends Component {
 
         return (
             <div>
-            
-                <h3>Previous Payment Details </h3>
                <div>
-            <CustomizedTables/>
-               <Table />
-               </div>
-                
-                <div><br />
-                                <button type="submit" className="btn btn-primary btn-block" action ="detail">Submit Payment Details</button>
+               <br /><br /><br /><br /><br />
+               <br /><br /><br /><br /><br />
+               <br /><br /><br /><br /><br />
+               <h3>Previous Payment Details </h3>
+           
+            
+               </div>             
+                <div>
+                <br />
+                <button type="submit" className="btn btn-primary btn-block" action ="detail">Submit Payment Details</button>
 
                 </div>
             </div>
+           
+                
             
         )
     }

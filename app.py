@@ -24,7 +24,7 @@ def sign_in():
 
         hashed_value = generate_password_hash(password)
         connection = mysql.connector.connect(host="localhost", user="root", password="1234",
-                                             database="sample_project_test_db")
+                                             database="sample_project_db")
         mycursor = connection.cursor()
         query = "INSERT into sign_in(email,password) "
        
@@ -66,15 +66,9 @@ def sign_in_check2():
 
 @app.route("/sign-in-get-all", methods=['POST'])
 def sign_in_get_all():
-    if request.method == 'POST':
-        user_details = request.get_json()
-        email = user_details['email']
-        password = user_details['password']
-        print(user_details)
-
     connection = mysql.connector.connect(host="localhost", user="root", password="1234", database="sample_project_db")
     mycursor = connection.cursor()
-    mycursor.execute("SELECT * FROM users")
+    mycursor.execute("SELECT email,first_name FROM users")
     results = mycursor.fetchall()
     connection.commit()
     return jsonify(results)

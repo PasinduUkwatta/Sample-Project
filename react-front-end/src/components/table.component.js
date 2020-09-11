@@ -43,7 +43,7 @@ const rows = [
   createData(10, 356, 16.0, 49, 3.9),
   createData(11, 356, 16.0, 49, 3.9),
   createData(12, 356, 16.0, 49, 3.9),
-  createData(7, 356, 16.0, 49, 3.9),
+  createData(13, 356, 16.0, 49, 3.9),
 ];
 
 const useStyles = makeStyles({
